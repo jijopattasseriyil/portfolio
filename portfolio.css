@@ -1,0 +1,229 @@
+*{                  /* modify the whole contents (universal ) */
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Playfair Display', serif;
+}
+.container{  /* modifying contents in the containor div */
+    width: 100%; /* to obtain max. width of the viewing screen */
+    height: 100vh;   /* vh=view port heigt -to obtain max. heght of the viewing screen 1vh=19.2 px  */
+    background-color: white;
+    position: relative;  /* all elemnts have to relate with this main div */
+}
+.navbar{  /* modifying the contents in the navber */
+    display: flex;   /* to display content side by side */
+    justify-content: space-between;   /* to creat space b/w two child content */
+    width: 85%;
+    margin-left: 100px;
+    align-items: center;/* to align items in the excat center position of a div */
+}
+.logo{   /* modifying the image in the navbar */
+    width: 130px;
+}
+.listitem{  /* modifying the whole list items in the navbar */
+    display: inline;  /* display contents in a line */
+    list-style: none;
+    margin: 10px 20px;  /* to make space b/w  */
+}
+.links{  /* modifying the items in the atribute tag which is in the list's */
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+/* tag:pseudo-class{property:value} */
+.links:hover{  /* to change the property of contents present in the class named link */
+    color: red;
+}
+.title{   /* modifying the div clss named title */
+    margin-left: 8%;
+    margin-top: 13%;
+}
+.title-heading{  /* to modify the h1  */
+    font-size: 50px;
+    margin-bottom: 20px;  /* to creat space b/w the heading and para /or use margine-top of the para */
+}
+.lastname{     /* span tag used to change the color of pj */
+    color: orange;
+
+}
+.dowload{  /* to modify the download button */
+    text-decoration:none ;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;  /* top&bottom 10px and left&right 20 px */
+    display: inline-block; /* to specify height and width */
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.title-img{
+    width: 45%;
+    height: 80%;
+    position: absolute; 
+    right: 30px;
+    bottom: 0px;
+}
+.title-img img{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: bottom 1s , left 2s;
+}
+.title-img:hover #shape{
+    bottom: 70px;
+}
+.title-img:hover #girl{
+    left: 40%;
+}
+/* styling for homr section ends here */
+
+/* styling for about section starts here */
+#about{
+    margin: 19% 8% 0px 8%;
+   
+}
+.heading{
+    text-align: center;
+}
+.heading h2{   /* discentant selector */
+    font-size: 30px;
+
+}
+.heading span{
+    font-size: 20px;
+    color: green;
+}
+.about-content{   
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);   /* 1fr=255px */ /* making the 2 child into 2 columns */
+    gap: 2rem;  /* 1rem=16px   used to creat gap  */
+    margin-top: 20px;
+}
+.about-image img{
+    width: 80%;
+    border-radius: 2rem;
+}
+.about-details{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+
+}
+.informations{
+    margin-top: 20px;
+}
+.info-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.info-box span{
+    margin-left: 20px;
+}
+#skills{               /* for all skill contents int the section*/ /* skill section starts here */
+    margin: 8% 8% 0px 8%;
+
+}
+.skill-contents{ /* modifying skill contents in to two columns */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 20px;
+}
+.skill-image{    /* modifying image */
+    width: 90%;
+    padding-left: 4rem;
+}
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    margin-bottom: 2rem;
+    position: relative;
+} 
+.base-bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0px;
+}
+.html-bar{
+    width: 95%;
+    background-color: orange;
+}
+.css-bar{
+    width: 88%;
+    background-color: orange;
+}
+.react-bar{
+    width: 89%;
+    background-color: orange;
+}
+.js-bar{
+    width: 85%;
+    background-color: orange;
+}                                       /* skill section ends here */
+.icon-set{                            /* contact section starts here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    
+}
+ 
+
+.icon, .up-arrow{
+    width: 55px;
+    height: 55px;
+   /*  border: 1px solid black; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+.icon i{
+    font-size: 40px;
+    color: black;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom right , yellow, orange);
+}
+.icon:hover i{
+    color: white;
+    animation: shake 0.75s;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}    /* contact section ends here */
+.up-arrow{
+    float: right;
+    background-image: linear-gradient(to bottom right , yellow, orange);
+    margin: 0px 10px 50px 0px;
+}
+.up-arrow :hover i{
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+.footer{
+    text-align: center;
+    font-weight: bold;
+}
